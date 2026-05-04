@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #000000;
+  --bg-card: #0d0d0d;
+  --text-primary: #f5f5f5;
+  --text-muted: #999999;
+  --text-subtle: #5a5a5a;
+  --border: #222222;
+  --accent: #ff7a7a;
+  --accent-strong: #ff5e5e;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-card: var(--bg-card);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+}
+
+body {
+  background-color: var(--bg);
+  /* Static feTurbulence noise tile — opacity 3.5%, no animation */
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22150%22%20height%3D%22150%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.65%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22150%22%20height%3D%22150%22%20filter%3D%22url(%23n)%22%20opacity%3D%220.035%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Coral accent text always uses Playfair Display */
+.text-accent {
+  font-family: var(--font-playfair);
+}
+
+/* Sidebar avatar glow ring */
+.avatar-glow {
+  border: 1px solid rgba(255,122,122,0.30);
+  box-shadow: 0 0 40px rgba(255,122,122,0.35);
+  transition: box-shadow 400ms ease;
+}
+.avatar-glow:hover {
+  box-shadow: 0 0 50px rgba(255,122,122,0.55);
+}
+
+/* Portrait coral dot pulse */
+@keyframes coralPulse {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 0.9; }
+}
+.coral-dot-pulse {
+  animation: coralPulse 5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .coral-dot-pulse {
+    animation: none;
+    opacity: 0.7;
+  }
+}
+
+/* ── Motion 2: Card hover lift ── */
+.hover-lift {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 122, 122, 0.15);
+}
+.hover-lift:active {
+  transform: scale(0.99);
+}
+
+/* ── Motion 3: Nav underline grow ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  width: 0;
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link.is-active::after {
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* Outlined button — border animates to accent on hover */
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 200ms ease;
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+}
+
+/* Per-card accent glows (override default coral) */
+.nvidia-glow:hover {
+  box-shadow: 0 8px 30px rgba(118, 185, 0, 0.18);
+}
+.apple-glow:hover {
+  box-shadow: 0 8px 30px rgba(212, 165, 116, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .hover-lift:hover,
+  .hover-lift:active {
+    transition: none;
+    transform: none;
+    box-shadow: none;
+  }
+  .nav-link::after {
+    transition: none;
+  }
+}
