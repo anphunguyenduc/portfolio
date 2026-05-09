@@ -49,6 +49,29 @@ const projects = [
     pptxFilename: "apple-equity-snapshot.pptx",
     objectPosition: "7% center",
   },
+  {
+    id: "masan",
+    glowClass: "masan-glow",
+    thumbnailSrc: "/images/projects/masan-thumbnail.png",
+    thumbnailAlt: "Masan Group Equity Snapshot slide preview",
+    eyebrow: "EQUITY ANALYSIS  ·  15 SLIDES",
+    ticker: "HOSE: MSN",
+    tickerColor: "#C8332E",
+    tickerBg: "rgba(200, 51, 46, 0.12)",
+    tickerBorder: "rgba(200, 51, 46, 0.3)",
+    title: "Masan Group Equity Snapshot",
+    tagline: "A bet on Vietnam's rising middle class.",
+    description: [
+      "How Vietnam's largest integrated consumer-retail group built a portfolio of brands present in 98% of Vietnamese households, then acquired the country's largest modern retail chain. Covers the FY2024 profit inflection, the December 2025 Masan Consumer HOSE listing, segment economics across MCH and WinCommerce, and the Vietnamese middle-class thesis.",
+      "Built using verified data from Masan Group Investor Relations, FY2024 management accounts, Q3 2025 earnings releases, and Kantar household reach surveys.",
+    ],
+    keyFinding:
+      "Masan's competitive moat in Vietnam is not any single brand or store, but the integration between brand, store, and bank. With Masan Consumer brands in 98% of households, WinCommerce running 4,500+ stores, and Techcombank handling payments, the company owns more of Vietnam's consumer value chain than any rival can replicate within a decade.",
+    pdfHref: "/pdfs/masan-equity-snapshot.pdf",
+    pptxHref: "/pptx/masan-equity-snapshot.pptx",
+    pptxFilename: "masan-equity-snapshot.pptx",
+    objectPosition: "6.5% center",
+  },
 ];
 
 export default function PersonalProjectsPage() {
@@ -80,9 +103,9 @@ export default function PersonalProjectsPage() {
         {/* Lead paragraph */}
         <p className="text-text-muted text-base leading-[1.75] mb-10 max-w-[680px]">
           I started reading 10-K filings and annual reports because I wanted to
-          understand the language Finance professionals actually use. These two
+          understand the language Finance professionals actually use. These three
           decks are the result. Each one took several weeks of reading investor
-          relations material, cross-checking numbers from SEC filings, and
+          relations material, cross-checking numbers from official filings, and
           writing my own interpretation of the business. I built the slides
           myself in Microsoft PowerPoint, designed to match each company&apos;s
           brand identity. The data is verified against the companies&apos; own

@@ -178,7 +178,7 @@ export default function HobbiesPage() {
             style={{ aspectRatio: "16/9" }}
           >
             <iframe
-              src="https://www.youtube.com/embed/KtL61pwI5p4?rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/UkHqVfIvvX0?rel=0&modestbranding=1"
               title="Piano performance"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -186,13 +186,13 @@ export default function HobbiesPage() {
             />
           </div>
 
-          {/* Video 2 — IMG_1956 */}
+          {/* Video 2 — IMG_1415 */}
           <div
             className="relative overflow-hidden rounded-lg bg-bg-card"
             style={{ aspectRatio: "16/9" }}
           >
             <iframe
-              src="https://www.youtube.com/embed/UkHqVfIvvX0?rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/KtL61pwI5p4?rel=0&modestbranding=1"
               title="Piano performance"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
