@@ -11,7 +11,7 @@ const navItems = [
   { num: "03", label: "Academics", href: "/academics" },
   { num: "04", label: "Personal Projects", href: "/personal-projects" },
   { num: "05", label: "Personal Hobbies", href: "/hobbies" },
-  { num: "06", label: "Testimonials", href: "/references" },
+  { num: "06", label: "References", href: "/references" },
 ];
 
 export default function Nav() {

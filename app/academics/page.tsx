@@ -9,15 +9,16 @@ const recordRows = [
   ],
   ["Year", "Grade 12 · Class of 2026"],
   ["Class rank", "Top of class, Grades 10–12"],
-  ["GPA (10-point scale)", "9.4 · 9.5 · 9.6 (Semester 1)"],
+  ["GPA (10-point scale)", "9.45 · 9.5 · 9.6 (Semester 1)"],
   ["IELTS", "8.0 overall"],
 ];
 
 const awards = [
-  "Top of class, Grades 10, 11, and projected Grade 12",
+  "Rank 1/30, Grades 10, 11, and 12",
   "2nd place · Greenfield Music Festival",
   "4× gold medals · Greenfield annual sports tournaments (basketball, STEAM challenge, cheerleading, pickleball)",
   "Class representative · Go Finance (Finance–Math competition), 1 of 6 class delegates, participation only, no placement",
+  "MOS Excel · 1000/1000",
 ];
 
 export default function AcademicsPage() {

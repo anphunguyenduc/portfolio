@@ -7,7 +7,7 @@ const projects = [
     title: "Greenfield Basketball Team",
     meta: "Head of Finance · Sep 2024 – May 2026",
     summary:
-      "Running the money for a 50-member club: budgets, fundraising, and the slow business of earning a team's trust.",
+      "Running the money for a 30+ member club: budgets, fundraising, and the slow business of earning a team's trust.",
     href: "/leadership/gbt",
     img: "/images/leadership/gbt-logo.jpg",
     imgAlt: "Greenfield Basketball Team logo",

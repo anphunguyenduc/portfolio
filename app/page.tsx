@@ -63,7 +63,7 @@ export default function AboutPage() {
             Continue ↗
           </Link>
           <a
-            href="mailto:[TODO: user to provide email]"
+            href="mailto:anphunguyen266@gmail.com"
             className="px-6 py-3 border border-border text-text-primary text-sm hover:border-text-muted transition-all hover:shadow-[0_0_40px_rgba(255,122,122,0.25)]"
           >
             Contact me

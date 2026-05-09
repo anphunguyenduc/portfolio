@@ -19,6 +19,8 @@ const projects = [
       "How NVIDIA captured 80–90% of the AI accelerator market and built a $5 trillion company in three years. Covers the Data Center segment, the CUDA software moat, FY2025 financials, and competitive threats from AMD and hyperscaler custom silicon.",
       "Built using verified data from NVIDIA Investor Relations, SEC 10-K filings, and Q3 FY2026 earnings releases.",
     ],
+    keyFinding:
+      "NVIDIA's true moat is not the hardware itself but the CUDA software ecosystem. Switching costs from CUDA-trained engineers and existing model code are the primary reason NVIDIA can sustain 70%+ gross margins despite AMD's recent hardware gains.",
     pdfHref: "/pdfs/nvidia-equity-snapshot.pdf",
     pptxHref: "/pptx/nvidia-equity-snapshot.pptx",
     pptxFilename: "nvidia-equity-snapshot.pptx",
@@ -40,6 +42,8 @@ const projects = [
       "How Apple built a $4 trillion company on premium pricing, vertical integration, and a 90% iPhone retention rate. Covers the Services engine that compounds at 75% gross margin, FY2025 financials, and the upcoming Tim Cook leadership transition.",
       "Built using verified data from Apple Investor Relations, FY2025 10-K filing, and Q1 FY2026 earnings.",
     ],
+    keyFinding:
+      "Apple's $4 trillion valuation rests less on iPhone unit growth and more on the Services segment compounding at 75% gross margin. Each iPhone sold is no longer the destination but the gateway to a recurring, high-margin subscription relationship lasting years.",
     pdfHref: "/pdfs/apple-equity-snapshot.pdf",
     pptxHref: "/pptx/apple-equity-snapshot.pptx",
     pptxFilename: "apple-equity-snapshot.pptx",
@@ -157,7 +161,7 @@ export default function PersonalProjectsPage() {
                   </p>
 
                   {/* Description */}
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-3 mb-6">
                     {project.description.map((para, j) => (
                       <p
                         key={j}
@@ -166,6 +170,22 @@ export default function PersonalProjectsPage() {
                         {para}
                       </p>
                     ))}
+                  </div>
+
+                  {/* Key finding */}
+                  <div className="mb-8">
+                    <p
+                      className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-2"
+                      style={{ color: "var(--accent)", fontFamily: "var(--font-inter)" }}
+                    >
+                      Key finding
+                    </p>
+                    <p
+                      className="text-gray-200 text-sm leading-[1.75] italic"
+                      style={{ fontFamily: "var(--font-inter)" }}
+                    >
+                      {project.keyFinding}
+                    </p>
                   </div>
                 </div>
 

@@ -1,3 +1,75 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
+const quoteMap: Record<string, { quote: string; author: string }> = {
+  "/": {
+    quote:
+      "We are all shaped by the people who believed in us before we believed in ourselves.",
+    author: "Howard Schultz",
+  },
+  "/leadership": {
+    quote:
+      "Leadership is not about being in charge. It is about taking care of those in your charge.",
+    author: "Simon Sinek",
+  },
+  "/leadership/gbt": {
+    quote:
+      "Talent wins games, but teamwork and intelligence win championships.",
+    author: "Michael Jordan",
+  },
+  "/leadership/talktopus": {
+    quote:
+      "The most important thing in communication is hearing what isn't said.",
+    author: "Peter Drucker",
+  },
+  "/leadership/gvc": {
+    quote: "No one has ever become poor by giving.",
+    author: "Anne Frank",
+  },
+  "/leadership/gvc/chocoziii": {
+    quote:
+      "Christmas is not a time nor a season, but a state of mind.",
+    author: "Calvin Coolidge",
+  },
+  "/leadership/gvc/may-xanh": {
+    quote:
+      "Education is the most powerful weapon which you can use to change the world.",
+    author: "Nelson Mandela",
+  },
+  "/leadership/gvc/nang": {
+    quote:
+      "What we have done for ourselves alone dies with us; what we have done for others and the world remains and is immortal.",
+    author: "Albert Pike",
+  },
+  "/leadership/donut-bully": {
+    quote: "The opposite of love is not hate, it's indifference.",
+    author: "Elie Wiesel",
+  },
+  "/academics": {
+    quote:
+      "The mind is not a vessel to be filled, but a fire to be kindled.",
+    author: "Plutarch",
+  },
+  "/personal-projects": {
+    quote:
+      "It does not matter how slowly you go as long as you do not stop.",
+    author: "Confucius",
+  },
+  "/hobbies": {
+    quote:
+      "Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything.",
+    author: "Plato",
+  },
+  "/references": {
+    quote:
+      "Surround yourself with only people who are going to lift you higher.",
+    author: "Oprah Winfrey",
+  },
+};
+
+const defaultQuote = quoteMap["/"];
+
 const contacts = [
   {
     label: "Open Facebook profile",
@@ -81,9 +153,12 @@ const contacts = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const { quote, author } = quoteMap[pathname] ?? defaultQuote;
+
   return (
     <footer className="lg:ml-[220px] border-t border-border bg-bg-card">
-      {/* Buffett quote */}
+      {/* Page-specific quote */}
       <div className="flex flex-col items-center px-8 pt-12 pb-12">
         <div
           className="h-px w-[120px] mb-6"
@@ -98,13 +173,13 @@ export default function Footer() {
             color: "#e5e7eb",
           }}
         >
-          &#x201C;Someone is sitting in the shade today because someone planted a tree a long time ago.&#x201D;
+          &#x201C;{quote}&#x201D;
         </p>
         <p
           className="text-[12px] tracking-widest uppercase text-text-subtle"
           style={{ fontFamily: "var(--font-inter)" }}
         >
-          &mdash; Warren Buffett
+          &mdash; {author}
         </p>
       </div>
 
