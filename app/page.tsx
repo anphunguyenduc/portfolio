@@ -73,7 +73,7 @@ export default function AboutPage() {
         {/* Hero essay */}
         <div className="space-y-6 text-text-primary text-base leading-[1.75]">
           <p>
-            I&apos;m applying to RMIT to study Finance and Economics. Before I
+            I&apos;m applying to study Finance and Economics. Before I
             tell you what I&apos;ve done, I want to tell you about one morning
             when I was eight.
           </p>
