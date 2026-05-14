@@ -9,7 +9,7 @@ const recordRows = [
   ],
   ["Year", "Grade 12 · Class of 2026"],
   ["Class rank", "Top of class, Grades 10–12"],
-  ["GPA (10-point scale)", "9.45 · 9.5 · 9.6 (Semester 1)"],
+  ["GPA (10-point scale)", "9.44 · 9.51 · 9.57 (Semester 1)"],
   ["IELTS", "8.0 overall"],
 ];
 
